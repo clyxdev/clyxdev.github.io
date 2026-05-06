@@ -10,6 +10,7 @@
 
       <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
       <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
       <link rel="stylesheet" href="assets/css/styles.css">
 
       <title>clyxdev - Portfolio</title>
@@ -58,15 +59,27 @@
       <main class="main">
          <section class="home section" id="home">
             <div class="home__container container">
+               <div class="home__bg-icons" aria-hidden="true">
+                  <i class="fab fa-github"></i>
+                  <i class="fab fa-python"></i>
+                  <i class="fab fa-js"></i>
+                  <i class="fas fa-terminal"></i>
+                  <i class="fas fa-code"></i>
+               </div>
+
                <span class="home__greeting">Hello, I'm</span>
                <h1 class="home__name">clyxdev</h1>
                <h2 class="home__education">Open-source Developer</h2>
 
                <div class="home__buttons">
                   <a href="https://github.com/clyxdev" class="button button--ghost" target="_blank" rel="noreferrer">
+                     <i class="fab fa-github"></i>
                      GitHub
                   </a>
-                  <a href="#about" class="button">About me</a>
+                  <a href="#about" class="button">
+                     <i class="fas fa-user-astronaut"></i>
+                     About me
+                  </a>
                </div>
 
                <div class="home__profile">
@@ -138,21 +151,21 @@
                   <div class="skills__box">
                      <div class="skills__group">
                         <div class="skills__data">
-                           <i class="bx bxs-badge-check"></i>
+                           <i class="fab fa-html5 skills__icon"></i>
                            <div>
                               <h4 class="skills__name">HTML</h4>
                               <span class="skills__level">Advanced</span>
                            </div>
                         </div>
                         <div class="skills__data">
-                           <i class="bx bxs-badge-check"></i>
+                           <i class="fab fa-css3-alt skills__icon"></i>
                            <div>
                               <h4 class="skills__name">CSS</h4>
                               <span class="skills__level">Advanced</span>
                            </div>
                         </div>
                         <div class="skills__data">
-                           <i class="bx bxs-badge-check"></i>
+                           <i class="fab fa-js skills__icon"></i>
                            <div>
                               <h4 class="skills__name">JavaScript</h4>
                               <span class="skills__level">Intermediate</span>
@@ -162,21 +175,21 @@
 
                      <div class="skills__group">
                         <div class="skills__data">
-                           <i class="bx bxs-badge-check"></i>
+                           <i class="fab fa-js skills__icon"></i>
                            <div>
                               <h4 class="skills__name">TypeScript</h4>
                               <span class="skills__level">Intermediate</span>
                            </div>
                         </div>
                         <div class="skills__data">
-                           <i class="bx bxs-badge-check"></i>
+                           <i class="fab fa-react skills__icon"></i>
                            <div>
                               <h4 class="skills__name">React</h4>
                               <span class="skills__level">Intermediate</span>
                            </div>
                         </div>
                         <div class="skills__data">
-                           <i class="bx bxs-badge-check"></i>
+                           <i class="fab fa-github skills__icon"></i>
                            <div>
                               <h4 class="skills__name">GitHub</h4>
                               <span class="skills__level">Advanced</span>
@@ -191,21 +204,21 @@
                   <div class="skills__box">
                      <div class="skills__group">
                         <div class="skills__data">
-                           <i class="bx bxs-badge-check"></i>
+                           <i class="fab fa-python skills__icon"></i>
                            <div>
                               <h4 class="skills__name">Python</h4>
                               <span class="skills__level">Advanced</span>
                            </div>
                         </div>
                         <div class="skills__data">
-                           <i class="bx bxs-badge-check"></i>
+                           <i class="fab fa-node-js skills__icon"></i>
                            <div>
                               <h4 class="skills__name">Node.js</h4>
                               <span class="skills__level">Intermediate</span>
                            </div>
                         </div>
                         <div class="skills__data">
-                           <i class="bx bxs-badge-check"></i>
+                           <i class="fas fa-plug skills__icon"></i>
                            <div>
                               <h4 class="skills__name">APIs</h4>
                               <span class="skills__level">Advanced</span>
@@ -215,21 +228,21 @@
 
                      <div class="skills__group">
                         <div class="skills__data">
-                           <i class="bx bxs-badge-check"></i>
+                           <i class="fab fa-telegram skills__icon"></i>
                            <div>
                               <h4 class="skills__name">Telegram Bots</h4>
                               <span class="skills__level">Advanced</span>
                            </div>
                         </div>
                         <div class="skills__data">
-                           <i class="bx bxs-badge-check"></i>
+                           <i class="fas fa-train skills__icon"></i>
                            <div>
                               <h4 class="skills__name">Railway</h4>
                               <span class="skills__level">Intermediate</span>
                            </div>
                         </div>
                         <div class="skills__data">
-                           <i class="bx bxs-badge-check"></i>
+                           <i class="fas fa-cloud-arrow-up skills__icon"></i>
                            <div>
                               <h4 class="skills__name">Vercel</h4>
                               <span class="skills__level">Intermediate</span>
@@ -275,6 +288,7 @@
                   <img src="assets/img/work1.jpg" alt="birthday-wish project preview" class="work__img">
                   <h3 class="work__title">birthday-wish</h3>
                   <a href="https://github.com/clyxdev/birthday-wish" class="work__button" target="_blank" rel="noreferrer">
+                     <i class="fab fa-github"></i>
                      GitHub <i class="bx bx-right-arrow-alt work__icon"></i>
                   </a>
                </article>
@@ -283,6 +297,7 @@
                   <img src="assets/img/work2.jpg" alt="WebHarvest project preview" class="work__img">
                   <h3 class="work__title">WebHarvest</h3>
                   <a href="https://github.com/clyxdev/WebHarvest" class="work__button" target="_blank" rel="noreferrer">
+                     <i class="fab fa-github"></i>
                      GitHub <i class="bx bx-right-arrow-alt work__icon"></i>
                   </a>
                </article>
@@ -291,6 +306,7 @@
                   <img src="assets/img/work3.jpg" alt="BioLinkProtector project preview" class="work__img">
                   <h3 class="work__title">BioLinkProtector</h3>
                   <a href="https://github.com/clyxdev/BioLinkProtector" class="work__button" target="_blank" rel="noreferrer">
+                     <i class="fab fa-github"></i>
                      GitHub <i class="bx bx-right-arrow-alt work__icon"></i>
                   </a>
                </article>
@@ -299,6 +315,7 @@
                   <img src="assets/img/work4.jpg" alt="Yorinamusicbot project preview" class="work__img">
                   <h3 class="work__title">Yorinamusicbot</h3>
                   <a href="https://github.com/clyxdev/Yorinamusicbot" class="work__button" target="_blank" rel="noreferrer">
+                     <i class="fab fa-github"></i>
                      GitHub <i class="bx bx-right-arrow-alt work__icon"></i>
                   </a>
                </article>
@@ -336,8 +353,14 @@
                      Follow the GitHub profile for repositories and updates, or connect on Instagram for quick messages.
                   </p>
                   <div class="contact__actions">
-                     <a href="https://github.com/clyxdev" class="button" target="_blank" rel="noreferrer">GitHub</a>
-                     <a href="https://www.instagram.com/shnwazdeveloperx/" class="button button--ghost" target="_blank" rel="noreferrer">Instagram</a>
+                     <a href="https://github.com/clyxdev" class="button" target="_blank" rel="noreferrer">
+                        <i class="fab fa-github"></i>
+                        GitHub
+                     </a>
+                     <a href="https://www.instagram.com/shnwazdeveloperx/" class="button button--ghost" target="_blank" rel="noreferrer">
+                        <i class="fab fa-instagram"></i>
+                        Instagram
+                     </a>
                   </div>
                </div>
             </div>
