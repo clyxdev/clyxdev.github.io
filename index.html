@@ -3,212 +3,342 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="clyxdev portfolio: open-source bots, APIs, automation tools, and developer utilities.">
-      <meta property="og:title" content="clyxdev - Developer Portfolio">
-      <meta property="og:description" content="Open-source bots, APIs, automation tools, and developer utilities.">
+      <meta name="description" content="clyxdev portfolio with GitHub projects, Instagram, and developer links.">
+      <meta property="og:title" content="clyxdev - Portfolio">
+      <meta property="og:description" content="Open-source developer building bots, APIs, and web tools.">
       <meta property="og:image" content="assets/img/clyxdev-avatar.png">
 
       <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+      <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
       <link rel="stylesheet" href="assets/css/styles.css">
 
-      <title>clyxdev - Developer Portfolio</title>
+      <title>clyxdev - Portfolio</title>
    </head>
    <body>
       <header class="header" id="header">
          <nav class="nav container" aria-label="Primary navigation">
             <a href="#home" class="nav__logo">clyxdev</a>
 
-            <div class="nav__menu" id="nav-menu">
+            <div class="nav__menu">
                <ul class="nav__list">
-                  <li><a href="#about" class="nav__link">About</a></li>
-                  <li><a href="#projects" class="nav__link">Projects</a></li>
-                  <li><a href="#stack" class="nav__link">Stack</a></li>
-                  <li><a href="#contact" class="nav__link">Contact</a></li>
+                  <li>
+                     <a href="#home" class="nav__link active-link" aria-label="Home">
+                        <i class="bx bx-home-alt"></i>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#about" class="nav__link" aria-label="About">
+                        <i class="bx bx-user"></i>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#skills" class="nav__link" aria-label="Skills">
+                        <i class="bx bx-code-alt"></i>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#work" class="nav__link" aria-label="Work">
+                        <i class="bx bx-briefcase-alt-2"></i>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#contact" class="nav__link" aria-label="Contact">
+                        <i class="bx bx-message-square-detail"></i>
+                     </a>
+                  </li>
                </ul>
-
-               <button class="nav__close" id="nav-close" aria-label="Close menu">
-                  <i class="ri-close-line"></i>
-               </button>
             </div>
 
-            <button class="nav__toggle" id="nav-toggle" aria-label="Open menu">
-               <i class="ri-menu-3-line"></i>
+            <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle color theme">
+               <i class="bx bx-moon"></i>
             </button>
          </nav>
       </header>
 
       <main class="main">
          <section class="home section" id="home">
-            <div class="home__container container grid">
-               <div class="home__content">
-                  <p class="home__eyebrow">Open-source developer</p>
-                  <h1 class="home__title">clyxdev</h1>
-                  <p class="home__description">
-                     Building Telegram bots, APIs, automation tools, and practical web utilities with a focus on clean deployment and useful developer workflows.
-                  </p>
+            <div class="home__container container">
+               <span class="home__greeting">Hello, I'm</span>
+               <h1 class="home__name">clyxdev</h1>
+               <h2 class="home__education">Open-source Developer</h2>
 
-                  <div class="home__actions">
-                     <a href="https://github.com/clyxdev" class="button" target="_blank" rel="noreferrer">
-                        <i class="ri-github-fill"></i>
-                        View GitHub
-                     </a>
-                     <a href="#projects" class="button button--ghost">
-                        <i class="ri-arrow-down-line"></i>
-                        See Projects
-                     </a>
-                  </div>
+               <div class="home__buttons">
+                  <a href="https://github.com/clyxdev" class="button button--ghost" target="_blank" rel="noreferrer">
+                     GitHub
+                  </a>
+                  <a href="#about" class="button">About me</a>
                </div>
 
-               <div class="home__visual" aria-label="clyxdev GitHub profile visual">
-                  <div class="home__image-wrap">
-                     <img src="assets/img/clyxdev-avatar.png" alt="clyxdev GitHub avatar" class="home__image">
-                  </div>
-
-                  <div class="home__social" aria-label="Social links">
-                     <a href="https://github.com/clyxdev" target="_blank" rel="noreferrer" aria-label="GitHub">
-                        <i class="ri-github-fill"></i>
-                     </a>
-                     <a href="https://www.linkedin.com/in/shnwazdev" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-                        <i class="ri-linkedin-box-fill"></i>
-                     </a>
-                     <a href="https://www.instagram.com/shnwazdeveloperx/" target="_blank" rel="noreferrer" aria-label="Instagram">
-                        <i class="ri-instagram-line"></i>
-                     </a>
-                  </div>
+               <div class="home__profile">
+                  <img src="assets/img/clyxdev-avatar.png" alt="clyxdev profile avatar" class="home__img">
                </div>
+
+               <div class="home__social" aria-label="Social links">
+                  <a href="https://github.com/clyxdev" class="home__social-link" target="_blank" rel="noreferrer" aria-label="GitHub">
+                     <i class="bx bxl-github"></i>
+                  </a>
+                  <a href="https://www.instagram.com/shnwazdeveloperx/" class="home__social-link" target="_blank" rel="noreferrer" aria-label="Instagram">
+                     <i class="bx bxl-instagram"></i>
+                  </a>
+               </div>
+
+               <a href="#about" class="home__scroll">
+                  <i class="bx bx-mouse home__scroll-icon"></i>
+                  <span class="home__scroll-name">Scroll Down</span>
+               </a>
             </div>
          </section>
 
          <section class="about section" id="about">
+            <span class="section__subtitle">My Intro</span>
+            <h2 class="section__title">About Me</h2>
+
             <div class="about__container container grid">
-               <div>
-                  <p class="section__eyebrow">About</p>
-                  <h2 class="section__title">Bots, APIs, and web tools that ship.</h2>
+               <div class="about__image">
+                  <img src="assets/img/clyxdev-avatar.png" alt="clyxdev avatar">
                </div>
 
-               <div class="about__content">
-                  <p>
-                     clyxdev builds deployment-ready Python services, TypeScript interfaces, Telegram automation, music utilities, and small tools that make developer tasks easier to run and maintain.
-                  </p>
-                  <div class="about__stats">
-                     <article>
-                        <strong>5+</strong>
-                        <span>GitHub projects</span>
+               <div class="about__data">
+                  <div class="about__info">
+                     <article class="about__box">
+                        <i class="bx bx-code-block about__icon"></i>
+                        <h3 class="about__title">Projects</h3>
+                        <span class="about__subtitle">5+ GitHub repos</span>
                      </article>
-                     <article>
-                        <strong>2026</strong>
-                        <span>Active profile</span>
+
+                     <article class="about__box">
+                        <i class="bx bx-bot about__icon"></i>
+                        <h3 class="about__title">Focus</h3>
+                        <span class="about__subtitle">Bots and APIs</span>
                      </article>
-                     <article>
-                        <strong>Open</strong>
-                        <span>To hire</span>
+
+                     <article class="about__box">
+                        <i class="bx bx-check-shield about__icon"></i>
+                        <h3 class="about__title">Status</h3>
+                        <span class="about__subtitle">Open to hire</span>
                      </article>
                   </div>
+
+                  <p class="about__description">
+                     clyxdev builds Telegram bots, deployment-ready Python services, TypeScript tools, and practical web utilities for developers and online communities.
+                  </p>
+
+                  <a href="#contact" class="button">Contact me</a>
                </div>
             </div>
          </section>
 
-         <section class="projects section" id="projects">
-            <div class="container">
-               <p class="section__eyebrow">Projects</p>
-               <h2 class="section__title">Selected GitHub work.</h2>
+         <section class="skills section" id="skills">
+            <span class="section__subtitle">My Abilities</span>
+            <h2 class="section__title">My Experience</h2>
 
-               <div class="projects__grid">
-                  <article class="project-card">
-                     <img src="assets/img/projects-1.png" alt="Birthday Wish project preview" class="project-card__image">
-                     <div class="project-card__body">
-                        <span class="project-card__tag">TypeScript</span>
-                        <h3>birthday-wish</h3>
-                        <p>An interactive birthday wish web project built for a fast, shareable browser experience.</p>
-                        <a href="https://github.com/clyxdev/birthday-wish" target="_blank" rel="noreferrer">
-                           Repository <i class="ri-arrow-right-up-line"></i>
-                        </a>
+            <div class="skills__container container grid">
+               <article class="skills__content">
+                  <h3 class="skills__title">Web Developer</h3>
+                  <div class="skills__box">
+                     <div class="skills__group">
+                        <div class="skills__data">
+                           <i class="bx bxs-badge-check"></i>
+                           <div>
+                              <h4 class="skills__name">HTML</h4>
+                              <span class="skills__level">Advanced</span>
+                           </div>
+                        </div>
+                        <div class="skills__data">
+                           <i class="bx bxs-badge-check"></i>
+                           <div>
+                              <h4 class="skills__name">CSS</h4>
+                              <span class="skills__level">Advanced</span>
+                           </div>
+                        </div>
+                        <div class="skills__data">
+                           <i class="bx bxs-badge-check"></i>
+                           <div>
+                              <h4 class="skills__name">JavaScript</h4>
+                              <span class="skills__level">Intermediate</span>
+                           </div>
+                        </div>
                      </div>
-                  </article>
 
-                  <article class="project-card">
-                     <img src="assets/img/projects-2.png" alt="WebHarvest project preview" class="project-card__image">
-                     <div class="project-card__body">
-                        <span class="project-card__tag">TypeScript</span>
-                        <h3>WebHarvest</h3>
-                        <p>A TypeScript utility project for collecting, shaping, and working with web data.</p>
-                        <a href="https://github.com/clyxdev/WebHarvest" target="_blank" rel="noreferrer">
-                           Repository <i class="ri-arrow-right-up-line"></i>
-                        </a>
+                     <div class="skills__group">
+                        <div class="skills__data">
+                           <i class="bx bxs-badge-check"></i>
+                           <div>
+                              <h4 class="skills__name">TypeScript</h4>
+                              <span class="skills__level">Intermediate</span>
+                           </div>
+                        </div>
+                        <div class="skills__data">
+                           <i class="bx bxs-badge-check"></i>
+                           <div>
+                              <h4 class="skills__name">React</h4>
+                              <span class="skills__level">Intermediate</span>
+                           </div>
+                        </div>
+                        <div class="skills__data">
+                           <i class="bx bxs-badge-check"></i>
+                           <div>
+                              <h4 class="skills__name">GitHub</h4>
+                              <span class="skills__level">Advanced</span>
+                           </div>
+                        </div>
                      </div>
-                  </article>
+                  </div>
+               </article>
 
-                  <article class="project-card">
-                     <img src="assets/img/projects-3.png" alt="BioLinkProtector project preview" class="project-card__image">
-                     <div class="project-card__body">
-                        <span class="project-card__tag">Python</span>
-                        <h3>BioLinkProtector</h3>
-                        <p>A Python project focused on link protection workflows and practical automation.</p>
-                        <a href="https://github.com/clyxdev/BioLinkProtector" target="_blank" rel="noreferrer">
-                           Repository <i class="ri-arrow-right-up-line"></i>
-                        </a>
+               <article class="skills__content">
+                  <h3 class="skills__title">Backend Developer</h3>
+                  <div class="skills__box">
+                     <div class="skills__group">
+                        <div class="skills__data">
+                           <i class="bx bxs-badge-check"></i>
+                           <div>
+                              <h4 class="skills__name">Python</h4>
+                              <span class="skills__level">Advanced</span>
+                           </div>
+                        </div>
+                        <div class="skills__data">
+                           <i class="bx bxs-badge-check"></i>
+                           <div>
+                              <h4 class="skills__name">Node.js</h4>
+                              <span class="skills__level">Intermediate</span>
+                           </div>
+                        </div>
+                        <div class="skills__data">
+                           <i class="bx bxs-badge-check"></i>
+                           <div>
+                              <h4 class="skills__name">APIs</h4>
+                              <span class="skills__level">Advanced</span>
+                           </div>
+                        </div>
                      </div>
-                  </article>
 
-                  <article class="project-card">
-                     <img src="assets/img/projects-4.png" alt="Yorinamusicbot project preview" class="project-card__image">
-                     <div class="project-card__body">
-                        <span class="project-card__tag">Python</span>
-                        <h3>Yorinamusicbot</h3>
-                        <p>A Telegram music bot project for experimenting with bot commands, playback flows, and deployment.</p>
-                        <a href="https://github.com/clyxdev/Yorinamusicbot" target="_blank" rel="noreferrer">
-                           Repository <i class="ri-arrow-right-up-line"></i>
-                        </a>
+                     <div class="skills__group">
+                        <div class="skills__data">
+                           <i class="bx bxs-badge-check"></i>
+                           <div>
+                              <h4 class="skills__name">Telegram Bots</h4>
+                              <span class="skills__level">Advanced</span>
+                           </div>
+                        </div>
+                        <div class="skills__data">
+                           <i class="bx bxs-badge-check"></i>
+                           <div>
+                              <h4 class="skills__name">Railway</h4>
+                              <span class="skills__level">Intermediate</span>
+                           </div>
+                        </div>
+                        <div class="skills__data">
+                           <i class="bx bxs-badge-check"></i>
+                           <div>
+                              <h4 class="skills__name">Vercel</h4>
+                              <span class="skills__level">Intermediate</span>
+                           </div>
+                        </div>
                      </div>
-                  </article>
-               </div>
+                  </div>
+               </article>
             </div>
          </section>
 
-         <section class="stack section" id="stack">
-            <div class="stack__container container grid">
-               <div>
-                  <p class="section__eyebrow">Stack</p>
-                  <h2 class="section__title">Tools used across the work.</h2>
-               </div>
+         <section class="services section">
+            <span class="section__subtitle">My Services</span>
+            <h2 class="section__title">What I Offer</h2>
 
-               <div class="stack__list" aria-label="Technology stack">
-                  <span>Python</span>
-                  <span>TypeScript</span>
-                  <span>JavaScript</span>
-                  <span>Node.js</span>
-                  <span>HTML</span>
-                  <span>CSS</span>
-                  <span>GitHub Actions</span>
-                  <span>Railway</span>
-                  <span>Vercel</span>
-                  <span>Telegram Bots</span>
-               </div>
+            <div class="services__container container grid">
+               <article class="services__card">
+                  <i class="bx bx-bot services__icon"></i>
+                  <h3 class="services__title">Telegram<br> Bots</h3>
+                  <p class="services__description">Automation, commands, deployment setup, and bot utilities.</p>
+               </article>
+
+               <article class="services__card">
+                  <i class="bx bx-server services__icon"></i>
+                  <h3 class="services__title">API<br> Projects</h3>
+                  <p class="services__description">Python and TypeScript APIs for music, metadata, and tools.</p>
+               </article>
+
+               <article class="services__card">
+                  <i class="bx bx-layout services__icon"></i>
+                  <h3 class="services__title">Web<br> Tools</h3>
+                  <p class="services__description">Clean static sites, dashboards, utilities, and GitHub workflows.</p>
+               </article>
+            </div>
+         </section>
+
+         <section class="work section" id="work">
+            <span class="section__subtitle">My Portfolio</span>
+            <h2 class="section__title">Recent Works</h2>
+
+            <div class="work__container container grid">
+               <article class="work__card">
+                  <img src="assets/img/work1.jpg" alt="birthday-wish project preview" class="work__img">
+                  <h3 class="work__title">birthday-wish</h3>
+                  <a href="https://github.com/clyxdev/birthday-wish" class="work__button" target="_blank" rel="noreferrer">
+                     GitHub <i class="bx bx-right-arrow-alt work__icon"></i>
+                  </a>
+               </article>
+
+               <article class="work__card">
+                  <img src="assets/img/work2.jpg" alt="WebHarvest project preview" class="work__img">
+                  <h3 class="work__title">WebHarvest</h3>
+                  <a href="https://github.com/clyxdev/WebHarvest" class="work__button" target="_blank" rel="noreferrer">
+                     GitHub <i class="bx bx-right-arrow-alt work__icon"></i>
+                  </a>
+               </article>
+
+               <article class="work__card">
+                  <img src="assets/img/work3.jpg" alt="BioLinkProtector project preview" class="work__img">
+                  <h3 class="work__title">BioLinkProtector</h3>
+                  <a href="https://github.com/clyxdev/BioLinkProtector" class="work__button" target="_blank" rel="noreferrer">
+                     GitHub <i class="bx bx-right-arrow-alt work__icon"></i>
+                  </a>
+               </article>
+
+               <article class="work__card">
+                  <img src="assets/img/work4.jpg" alt="Yorinamusicbot project preview" class="work__img">
+                  <h3 class="work__title">Yorinamusicbot</h3>
+                  <a href="https://github.com/clyxdev/Yorinamusicbot" class="work__button" target="_blank" rel="noreferrer">
+                     GitHub <i class="bx bx-right-arrow-alt work__icon"></i>
+                  </a>
+               </article>
             </div>
          </section>
 
          <section class="contact section" id="contact">
-            <div class="contact__container container">
-               <p class="section__eyebrow">Contact</p>
-               <h2 class="section__title">Connect with clyxdev.</h2>
-               <p class="contact__description">
-                  For project updates, repositories, and collaboration links, start from the GitHub profile.
-               </p>
+            <span class="section__subtitle">Get in Touch</span>
+            <h2 class="section__title">Contact Me</h2>
 
-               <div class="contact__actions">
-                  <a href="https://github.com/clyxdev" class="button" target="_blank" rel="noreferrer">
-                     <i class="ri-github-fill"></i>
-                     GitHub Profile
-                  </a>
-                  <a href="https://www.linkedin.com/in/shnwazdev" class="button button--ghost" target="_blank" rel="noreferrer">
-                     <i class="ri-linkedin-box-fill"></i>
-                     LinkedIn
-                  </a>
-                  <button class="button button--ghost" id="copy-link" type="button">
-                     <i class="ri-links-line"></i>
-                     Copy Site Link
-                  </button>
+            <div class="contact__container container grid">
+               <div class="contact__content">
+                  <h3 class="contact__title">Talk to me</h3>
+
+                  <div class="contact__info">
+                     <a href="https://github.com/clyxdev" class="contact__card" target="_blank" rel="noreferrer">
+                        <i class="bx bxl-github contact__card-icon"></i>
+                        <h4 class="contact__card-title">GitHub</h4>
+                        <span class="contact__card-data">@clyxdev</span>
+                        <span class="contact__button">Open profile <i class="bx bx-right-arrow-alt"></i></span>
+                     </a>
+
+                     <a href="https://www.instagram.com/shnwazdeveloperx/" class="contact__card" target="_blank" rel="noreferrer">
+                        <i class="bx bxl-instagram contact__card-icon"></i>
+                        <h4 class="contact__card-title">Instagram</h4>
+                        <span class="contact__card-data">@shnwazdeveloperx</span>
+                        <span class="contact__button">Message me <i class="bx bx-right-arrow-alt"></i></span>
+                     </a>
+                  </div>
+               </div>
+
+               <div class="contact__content">
+                  <h3 class="contact__title">Project links</h3>
+                  <p class="contact__description">
+                     Follow the GitHub profile for repositories and updates, or connect on Instagram for quick messages.
+                  </p>
+                  <div class="contact__actions">
+                     <a href="https://github.com/clyxdev" class="button" target="_blank" rel="noreferrer">GitHub</a>
+                     <a href="https://www.instagram.com/shnwazdeveloperx/" class="button button--ghost" target="_blank" rel="noreferrer">Instagram</a>
+                  </div>
                </div>
             </div>
          </section>
@@ -216,8 +346,28 @@
 
       <footer class="footer">
          <div class="footer__container container">
-            <a href="#home" class="footer__logo">clyxdev</a>
-            <p>&#169; <span id="footer-year">2026</span> clyxdev. All rights reserved.</p>
+            <h2 class="footer__title">clyxdev</h2>
+
+            <ul class="footer__list">
+               <li><a href="#about" class="footer__link">About</a></li>
+               <li><a href="#work" class="footer__link">Projects</a></li>
+               <li><a href="#contact" class="footer__link">Contact</a></li>
+            </ul>
+
+            <ul class="footer__social">
+               <li>
+                  <a href="https://github.com/clyxdev" class="footer__social-link" target="_blank" rel="noreferrer" aria-label="GitHub">
+                     <i class="bx bxl-github"></i>
+                  </a>
+               </li>
+               <li>
+                  <a href="https://www.instagram.com/shnwazdeveloperx/" class="footer__social-link" target="_blank" rel="noreferrer" aria-label="Instagram">
+                     <i class="bx bxl-instagram"></i>
+                  </a>
+               </li>
+            </ul>
+
+            <span class="footer__copy">&#169; <span id="footer-year">2026</span> clyxdev. All rights reserved.</span>
          </div>
       </footer>
 

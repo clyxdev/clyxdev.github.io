@@ -1,50 +1,36 @@
-const navMenu = document.getElementById("nav-menu");
-const navToggle = document.getElementById("nav-toggle");
-const navClose = document.getElementById("nav-close");
-const navLinks = document.querySelectorAll(".nav__link");
 const header = document.getElementById("header");
-const copyLink = document.getElementById("copy-link");
+const themeToggle = document.getElementById("theme-toggle");
 const footerYear = document.getElementById("footer-year");
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll(".nav__link");
 
-if (navToggle) {
-  navToggle.addEventListener("click", () => {
-    navMenu.classList.add("show-menu");
-  });
+const savedTheme = localStorage.getItem("selected-theme");
+const savedIcon = localStorage.getItem("selected-icon");
+
+if (savedTheme === "light") {
+  document.body.classList.add("light-theme");
 }
 
-if (navClose) {
-  navClose.addEventListener("click", () => {
-    navMenu.classList.remove("show-menu");
-  });
+if (savedIcon && themeToggle) {
+  themeToggle.querySelector("i").className = savedIcon;
 }
-
-navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    navMenu.classList.remove("show-menu");
-  });
-});
 
 const updateHeader = () => {
-  header.classList.toggle("is-scrolled", window.scrollY >= 24);
+  header.classList.toggle("scroll-header", window.scrollY >= 50);
 };
 
-window.addEventListener("scroll", updateHeader);
-updateHeader();
-
-const sections = document.querySelectorAll("section[id]");
-
-const setActiveLink = () => {
-  const scrollPosition = window.scrollY + 120;
+const updateActiveLink = () => {
+  const scrollY = window.scrollY;
 
   sections.forEach((section) => {
-    const sectionTop = section.offsetTop;
     const sectionHeight = section.offsetHeight;
+    const sectionTop = section.offsetTop - 58;
     const sectionId = section.getAttribute("id");
     const link = document.querySelector(`.nav__link[href="#${sectionId}"]`);
 
     if (!link) return;
 
-    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
       link.classList.add("active-link");
     } else {
       link.classList.remove("active-link");
@@ -52,21 +38,27 @@ const setActiveLink = () => {
   });
 };
 
-window.addEventListener("scroll", setActiveLink);
-setActiveLink();
+window.addEventListener("scroll", () => {
+  updateHeader();
+  updateActiveLink();
+});
 
-if (copyLink) {
-  copyLink.addEventListener("click", async () => {
-    const url = "https://clyxdev.github.io/";
-    await navigator.clipboard.writeText(url);
-    const originalText = copyLink.innerHTML;
-    copyLink.innerHTML = '<i class="ri-check-line"></i> Copied';
-    setTimeout(() => {
-      copyLink.innerHTML = originalText;
-    }, 1600);
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("light-theme");
+
+    const icon = themeToggle.querySelector("i");
+    icon.classList.toggle("bx-moon");
+    icon.classList.toggle("bx-sun");
+
+    localStorage.setItem("selected-theme", document.body.classList.contains("light-theme") ? "light" : "dark");
+    localStorage.setItem("selected-icon", icon.className);
   });
 }
 
 if (footerYear) {
   footerYear.textContent = new Date().getFullYear();
 }
+
+updateHeader();
+updateActiveLink();
