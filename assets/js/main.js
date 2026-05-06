@@ -1,8 +1,6 @@
 const header = document.getElementById("header");
 const themeToggle = document.getElementById("theme-toggle");
 const footerYear = document.getElementById("footer-year");
-const sections = document.querySelectorAll("section[id]");
-const navLinks = document.querySelectorAll(".nav__link");
 const revealTargets = document.querySelectorAll(
   ".section__subtitle, .section__title, .about__image, .about__box, .about__description, .about__data .button, .skills__content, .services__card, .work__card, .contact__content, .footer__title, .footer__list, .footer__social, .footer__copy"
 );
@@ -24,29 +22,7 @@ const updateHeader = () => {
   header.classList.toggle("scroll-header", window.scrollY >= 50);
 };
 
-const updateActiveLink = () => {
-  const scrollY = window.scrollY;
-
-  sections.forEach((section) => {
-    const sectionHeight = section.offsetHeight;
-    const sectionTop = section.offsetTop - 58;
-    const sectionId = section.getAttribute("id");
-    const link = document.querySelector(`.nav__link[href="#${sectionId}"]`);
-
-    if (!link) return;
-
-    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      link.classList.add("active-link");
-    } else {
-      link.classList.remove("active-link");
-    }
-  });
-};
-
-window.addEventListener("scroll", () => {
-  updateHeader();
-  updateActiveLink();
-});
+window.addEventListener("scroll", updateHeader);
 
 if (themeToggle) {
   themeToggle.addEventListener("click", () => {
@@ -88,4 +64,3 @@ const revealObserver = new IntersectionObserver(
 revealTargets.forEach((element) => revealObserver.observe(element));
 
 updateHeader();
-updateActiveLink();
