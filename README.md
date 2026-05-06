@@ -9,4 +9,4 @@ https://clyxdev.github.io/
 ## Links
 
 - GitHub: https://github.com/clyxdev
-- Instagram: https://www.instagram.com/shnwazdeveloperx/
+- Instagram: https://www.instagram.com/clyxdev/
