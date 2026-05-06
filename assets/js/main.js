@@ -3,6 +3,11 @@ const themeToggle = document.getElementById("theme-toggle");
 const footerYear = document.getElementById("footer-year");
 const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(".nav__link");
+const revealTargets = document.querySelectorAll(
+  ".section__subtitle, .section__title, .about__image, .about__box, .about__description, .about__data .button, .skills__content, .services__card, .work__card, .contact__content, .footer__title, .footer__list, .footer__social, .footer__copy"
+);
+
+document.documentElement.classList.add("motion-ready");
 
 const savedTheme = localStorage.getItem("selected-theme");
 const savedIcon = localStorage.getItem("selected-icon");
@@ -59,6 +64,28 @@ if (themeToggle) {
 if (footerYear) {
   footerYear.textContent = new Date().getFullYear();
 }
+
+revealTargets.forEach((element, index) => {
+  element.classList.add("reveal");
+  element.style.setProperty("--reveal-delay", `${Math.min(index % 4, 3) * 80}ms`);
+});
+
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.12,
+    rootMargin: "0px 0px -8% 0px",
+  }
+);
+
+revealTargets.forEach((element) => revealObserver.observe(element));
 
 updateHeader();
 updateActiveLink();
