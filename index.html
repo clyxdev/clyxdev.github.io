@@ -1,85 +1,226 @@
 <!DOCTYPE html>
-   <html lang="en">
+<html lang="en">
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="clyxdev portfolio: open-source bots, APIs, automation tools, and developer utilities.">
+      <meta property="og:title" content="clyxdev - Developer Portfolio">
+      <meta property="og:description" content="Open-source bots, APIs, automation tools, and developer utilities.">
+      <meta property="og:image" content="assets/img/clyxdev-avatar.png">
 
-      <!--=============== FAVICON ===============-->
       <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
-
-      <!--=============== REMIXICONS ===============-->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
-
-      <!--=============== SWIPER CSS ===============-->
-      <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-
-      <!--=============== CSS ===============-->
       <link rel="stylesheet" href="assets/css/styles.css">
 
-      <title>Responsive portfolio website Anid - Bedimcode</title>
+      <title>clyxdev - Developer Portfolio</title>
    </head>
    <body>
-      <!--==================== HEADER ====================-->
       <header class="header" id="header">
+         <nav class="nav container" aria-label="Primary navigation">
+            <a href="#home" class="nav__logo">clyxdev</a>
 
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                  <li><a href="#about" class="nav__link">About</a></li>
+                  <li><a href="#projects" class="nav__link">Projects</a></li>
+                  <li><a href="#stack" class="nav__link">Stack</a></li>
+                  <li><a href="#contact" class="nav__link">Contact</a></li>
+               </ul>
+
+               <button class="nav__close" id="nav-close" aria-label="Close menu">
+                  <i class="ri-close-line"></i>
+               </button>
+            </div>
+
+            <button class="nav__toggle" id="nav-toggle" aria-label="Open menu">
+               <i class="ri-menu-3-line"></i>
+            </button>
+         </nav>
       </header>
 
-      <!--==================== MAIN ====================-->
       <main class="main">
-         <!-- CUSTOM CURSOR -->
-         
-         <!--==================== HOME ====================-->
-         <section class="home section">
-            
-            
+         <section class="home section" id="home">
+            <div class="home__container container grid">
+               <div class="home__content">
+                  <p class="home__eyebrow">Open-source developer</p>
+                  <h1 class="home__title">clyxdev</h1>
+                  <p class="home__description">
+                     Building Telegram bots, APIs, automation tools, and practical web utilities with a focus on clean deployment and useful developer workflows.
+                  </p>
+
+                  <div class="home__actions">
+                     <a href="https://github.com/clyxdev" class="button" target="_blank" rel="noreferrer">
+                        <i class="ri-github-fill"></i>
+                        View GitHub
+                     </a>
+                     <a href="#projects" class="button button--ghost">
+                        <i class="ri-arrow-down-line"></i>
+                        See Projects
+                     </a>
+                  </div>
+               </div>
+
+               <div class="home__visual" aria-label="clyxdev GitHub profile visual">
+                  <div class="home__image-wrap">
+                     <img src="assets/img/clyxdev-avatar.png" alt="clyxdev GitHub avatar" class="home__image">
+                  </div>
+
+                  <div class="home__social" aria-label="Social links">
+                     <a href="https://github.com/clyxdev" target="_blank" rel="noreferrer" aria-label="GitHub">
+                        <i class="ri-github-fill"></i>
+                     </a>
+                     <a href="https://www.linkedin.com/in/shnwazdev" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                        <i class="ri-linkedin-box-fill"></i>
+                     </a>
+                     <a href="https://www.instagram.com/shnwazdeveloperx/" target="_blank" rel="noreferrer" aria-label="Instagram">
+                        <i class="ri-instagram-line"></i>
+                     </a>
+                  </div>
+               </div>
+            </div>
          </section>
 
-         <!--==================== ABOUT ====================-->
          <section class="about section" id="about">
-            
+            <div class="about__container container grid">
+               <div>
+                  <p class="section__eyebrow">About</p>
+                  <h2 class="section__title">Bots, APIs, and web tools that ship.</h2>
+               </div>
+
+               <div class="about__content">
+                  <p>
+                     clyxdev builds deployment-ready Python services, TypeScript interfaces, Telegram automation, music utilities, and small tools that make developer tasks easier to run and maintain.
+                  </p>
+                  <div class="about__stats">
+                     <article>
+                        <strong>5+</strong>
+                        <span>GitHub projects</span>
+                     </article>
+                     <article>
+                        <strong>2026</strong>
+                        <span>Active profile</span>
+                     </article>
+                     <article>
+                        <strong>Open</strong>
+                        <span>To hire</span>
+                     </article>
+                  </div>
+               </div>
+            </div>
          </section>
 
-         <!--==================== PROJECTS ====================-->
          <section class="projects section" id="projects">
-            
+            <div class="container">
+               <p class="section__eyebrow">Projects</p>
+               <h2 class="section__title">Selected GitHub work.</h2>
+
+               <div class="projects__grid">
+                  <article class="project-card">
+                     <img src="assets/img/projects-1.png" alt="Birthday Wish project preview" class="project-card__image">
+                     <div class="project-card__body">
+                        <span class="project-card__tag">TypeScript</span>
+                        <h3>birthday-wish</h3>
+                        <p>An interactive birthday wish web project built for a fast, shareable browser experience.</p>
+                        <a href="https://github.com/clyxdev/birthday-wish" target="_blank" rel="noreferrer">
+                           Repository <i class="ri-arrow-right-up-line"></i>
+                        </a>
+                     </div>
+                  </article>
+
+                  <article class="project-card">
+                     <img src="assets/img/projects-2.png" alt="WebHarvest project preview" class="project-card__image">
+                     <div class="project-card__body">
+                        <span class="project-card__tag">TypeScript</span>
+                        <h3>WebHarvest</h3>
+                        <p>A TypeScript utility project for collecting, shaping, and working with web data.</p>
+                        <a href="https://github.com/clyxdev/WebHarvest" target="_blank" rel="noreferrer">
+                           Repository <i class="ri-arrow-right-up-line"></i>
+                        </a>
+                     </div>
+                  </article>
+
+                  <article class="project-card">
+                     <img src="assets/img/projects-3.png" alt="BioLinkProtector project preview" class="project-card__image">
+                     <div class="project-card__body">
+                        <span class="project-card__tag">Python</span>
+                        <h3>BioLinkProtector</h3>
+                        <p>A Python project focused on link protection workflows and practical automation.</p>
+                        <a href="https://github.com/clyxdev/BioLinkProtector" target="_blank" rel="noreferrer">
+                           Repository <i class="ri-arrow-right-up-line"></i>
+                        </a>
+                     </div>
+                  </article>
+
+                  <article class="project-card">
+                     <img src="assets/img/projects-4.png" alt="Yorinamusicbot project preview" class="project-card__image">
+                     <div class="project-card__body">
+                        <span class="project-card__tag">Python</span>
+                        <h3>Yorinamusicbot</h3>
+                        <p>A Telegram music bot project for experimenting with bot commands, playback flows, and deployment.</p>
+                        <a href="https://github.com/clyxdev/Yorinamusicbot" target="_blank" rel="noreferrer">
+                           Repository <i class="ri-arrow-right-up-line"></i>
+                        </a>
+                     </div>
+                  </article>
+               </div>
+            </div>
          </section>
 
-         <!--==================== WORK ====================-->
-         <section class="work section">
+         <section class="stack section" id="stack">
+            <div class="stack__container container grid">
+               <div>
+                  <p class="section__eyebrow">Stack</p>
+                  <h2 class="section__title">Tools used across the work.</h2>
+               </div>
 
+               <div class="stack__list" aria-label="Technology stack">
+                  <span>Python</span>
+                  <span>TypeScript</span>
+                  <span>JavaScript</span>
+                  <span>Node.js</span>
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>GitHub Actions</span>
+                  <span>Railway</span>
+                  <span>Vercel</span>
+                  <span>Telegram Bots</span>
+               </div>
+            </div>
          </section>
 
-         <!--==================== SERVICES ====================-->
-         <section class="services section">
-
-         </section>
-
-         <!--==================== TESTIMONIALS ====================-->
-         <section class="testimonials section">
-
-         </section>
-
-         <!--==================== CONTACT ====================-->
          <section class="contact section" id="contact">
-            
+            <div class="contact__container container">
+               <p class="section__eyebrow">Contact</p>
+               <h2 class="section__title">Connect with clyxdev.</h2>
+               <p class="contact__description">
+                  For project updates, repositories, and collaboration links, start from the GitHub profile.
+               </p>
+
+               <div class="contact__actions">
+                  <a href="https://github.com/clyxdev" class="button" target="_blank" rel="noreferrer">
+                     <i class="ri-github-fill"></i>
+                     GitHub Profile
+                  </a>
+                  <a href="https://www.linkedin.com/in/shnwazdev" class="button button--ghost" target="_blank" rel="noreferrer">
+                     <i class="ri-linkedin-box-fill"></i>
+                     LinkedIn
+                  </a>
+                  <button class="button button--ghost" id="copy-link" type="button">
+                     <i class="ri-links-line"></i>
+                     Copy Site Link
+                  </button>
+               </div>
+            </div>
          </section>
       </main>
 
-      <!--==================== FOOTER ====================-->
-      <footer class="footer grid">
-         
+      <footer class="footer">
+         <div class="footer__container container">
+            <a href="#home" class="footer__logo">clyxdev</a>
+            <p>&#169; <span id="footer-year">2026</span> clyxdev. All rights reserved.</p>
+         </div>
       </footer>
-      
-      <!--=============== SCROLLREVEAL ===============-->
-      <script src="assets/js/scrollreveal.min.js"></script>
 
-      <!--=============== ANIME JS ===============-->
-      <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.iife.min.js"></script>
-
-      <!--=============== SWIPER JS ===============-->
-      <script src="assets/js/swiper-bundle.min.js"></script>
-
-      <!--=============== MAIN JS ===============-->
       <script src="assets/js/main.js"></script>
    </body>
 </html>

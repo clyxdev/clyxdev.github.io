@@ -1,31 +1,72 @@
-/*=============== HOME SPLIT TEXT ===============*/
+const navMenu = document.getElementById("nav-menu");
+const navToggle = document.getElementById("nav-toggle");
+const navClose = document.getElementById("nav-close");
+const navLinks = document.querySelectorAll(".nav__link");
+const header = document.getElementById("header");
+const copyLink = document.getElementById("copy-link");
+const footerYear = document.getElementById("footer-year");
 
+if (navToggle) {
+  navToggle.addEventListener("click", () => {
+    navMenu.classList.add("show-menu");
+  });
+}
 
-/*=============== SWIPER PROJECTS ===============*/
+if (navClose) {
+  navClose.addEventListener("click", () => {
+    navMenu.classList.remove("show-menu");
+  });
+}
 
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("show-menu");
+  });
+});
 
-/*=============== WORK TABS ===============*/
+const updateHeader = () => {
+  header.classList.toggle("is-scrolled", window.scrollY >= 24);
+};
 
+window.addEventListener("scroll", updateHeader);
+updateHeader();
 
-/*=============== SERVICES ACCORDION ===============*/
+const sections = document.querySelectorAll("section[id]");
 
+const setActiveLink = () => {
+  const scrollPosition = window.scrollY + 120;
 
-/*=============== TESTIMONIALS OF DUPLICATE CARDS ===============*/
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+    const sectionId = section.getAttribute("id");
+    const link = document.querySelector(`.nav__link[href="#${sectionId}"]`);
 
+    if (!link) return;
 
-/*=============== COPY EMAIL IN CONTACT ===============*/
+    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+      link.classList.add("active-link");
+    } else {
+      link.classList.remove("active-link");
+    }
+  });
+};
 
+window.addEventListener("scroll", setActiveLink);
+setActiveLink();
 
-/*=============== CURRENT YEAR OF THE FOOTER ===============*/ 
+if (copyLink) {
+  copyLink.addEventListener("click", async () => {
+    const url = "https://clyxdev.github.io/";
+    await navigator.clipboard.writeText(url);
+    const originalText = copyLink.innerHTML;
+    copyLink.innerHTML = '<i class="ri-check-line"></i> Copied';
+    setTimeout(() => {
+      copyLink.innerHTML = originalText;
+    }, 1600);
+  });
+}
 
-
-/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
-
-
-/*=============== CUSTOM CURSOR ===============*/
-
-
-/* Hide custom cursor on links */
-
-
-/*=============== SCROLL REVEAL ANIMATION ===============*/
+if (footerYear) {
+  footerYear.textContent = new Date().getFullYear();
+}
